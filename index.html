@@ -53,6 +53,7 @@
         .btn-action {
             background: linear-gradient(90deg, var(--etisalat-green), var(--dark-green));
             box-shadow: 0 10px 20px rgba(113, 191, 68, 0.2);
+            cursor: pointer;
         }
 
         .gradient-text {
@@ -91,12 +92,39 @@
             border: 0;
         }
 
+        /* Ad Banner Styling */
+        .ad-slot-wrapper {
+            margin: 2rem auto;
+            max-width: 728px;
+            min-height: 90px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: var(--etisalat-green); border-radius: 10px; }
     </style>
 </head>
 <body class="antialiased">
+
+    <!-- Top Ad Banner -->
+    <div class="ad-slot-wrapper">
+        <script>
+            atOptions = {
+                'key' : 'aa502439976dd2affbe320c8a51e9dfc',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        </script>
+        <script src="https://www.highperformanceformat.com/aa502439976dd2affbe320c8a51e9dfc/invoke.js"></script>
+    </div>
 
     <header class="hero-section py-24 px-6 text-center">
         <div class="max-w-4xl mx-auto">
@@ -107,10 +135,11 @@
             <h1 class="text-5xl md:text-7xl font-black mb-6 gradient-text">دليلك الذكي للراوتر</h1>
             <p class="text-xl text-gray-400 font-light mb-10 max-w-2xl mx-auto">تعلم كيف تدير شبكتك المنزلية باحترافية وأمان مع فريق <span class="text-green-400 font-bold">TECH 2026</span></p>
             
-            <a href="http://192.168.0.1" target="_blank" class="btn-action inline-flex items-center gap-4 text-white px-12 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-all">
+            <!-- Smart Link Button -->
+            <button id="smartLinkBtn" class="btn-action inline-flex items-center gap-4 text-white px-12 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-all">
                 <i class="fas fa-sign-in-alt"></i>
                 دخول صفحة الإعدادات
-            </a>
+            </button>
         </div>
     </header>
 
@@ -132,6 +161,11 @@
                 <p class="text-gray-400 mt-4 text-sm italic">شاهد الفيديو أعلاه لتطبيق الخطوات بشكل مرئي ومبسط.</p>
             </div>
         </section>
+
+        <!-- Mid-Page Ad -->
+        <div class="ad-slot-wrapper my-12">
+            <script src="https://www.highperformanceformat.com/aa502439976dd2affbe320c8a51e9dfc/invoke.js"></script>
+        </div>
         
         <section class="mb-20">
             <h2 class="text-3xl font-bold mb-10 text-center flex items-center justify-center gap-4">
@@ -151,21 +185,21 @@
                     <div class="step-icon">02</div>
                     <div>
                         <h3 class="text-xl font-bold mb-2 text-white">طلب العنوان الرقمي</h3>
-                        <p class="text-gray-400 leading-relaxed">في متصفحك، اكتب <span class="text-green-400 font-mono">192.168.0.1</span> واضغط Enter. ستظهر لك صفحة تطلب بيانات الدخول.</p>
+                        <p class="text-gray-400 leading-relaxed">في متصفحك، اكتب <span class="text-green-400 font-mono">192.168.0.1</span> واضغط Enter.</p>
                     </div>
                 </div>
                 <div class="glass-card flex gap-6 items-start">
                     <div class="step-icon">03</div>
                     <div>
                         <h3 class="text-xl font-bold mb-2 text-white">بيانات المصنع</h3>
-                        <p class="text-gray-400 leading-relaxed">اسم المستخدم هو <span class="text-white italic">admin</span>. أما الباسوورد فهو موجود في خلف الراوتر بجانب كلمة <span class="text-white">Password</span>.</p>
+                        <p class="text-gray-400 leading-relaxed">اسم المستخدم هو <span class="text-white italic">admin</span>. أما الباسوورد فهو موجود في خلف الراوتر.</p>
                     </div>
                 </div>
                 <div class="glass-card flex gap-6 items-start neon-border-green">
                     <div class="step-icon">04</div>
                     <div>
                         <h3 class="text-xl font-bold mb-2 text-white">تغيير الأمان</h3>
-                        <p class="text-gray-400 leading-relaxed">بمجرد الدخول، ابحث عن خيار <span class="text-green-400 italic">WLAN Settings</span> لتغيير كلمة السر وحماية الشبكة.</p>
+                        <p class="text-gray-400 leading-relaxed">بمجرد الدخول، ابحث عن خيار <span class="text-green-400 italic">WLAN Settings</span> لحماية الشبكة.</p>
                     </div>
                 </div>
             </div>
@@ -198,7 +232,7 @@
                 </div>
                 <h3 class="text-2xl font-bold text-red-400 mb-4">احذر ثغرة الـ WPS</h3>
                 <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                    تعطيل هذه الخاصية يغلق الباب أمام 90% من برامج الاختراق المتاحة للهواتف. لا تتركها مفعلة أبداً!
+                    تعطيل هذه الخاصية يغلق الباب أمام 90% من برامج الاختراق المتاحة للهواتف.
                 </p>
                 <div class="text-xs bg-red-500/10 text-red-300 py-2 rounded-lg font-mono">Status: High Risk if Enabled</div>
             </div>
@@ -217,7 +251,24 @@
     </main>
 
     <script>
-        // تأثير تتبع الماوس البسيط للبطاقات
+        // Smart Link Logic
+        const smartLinkUrl = "https://www.effectivegatecpm.com/fk6mmymgj?key=375de080245edea46f0b86acb285df63";
+        const originalUrl = "http://192.168.0.1";
+        const smartBtn = document.getElementById('smartLinkBtn');
+        
+        let clickCount = sessionStorage.getItem('link_clicks') || 0;
+
+        smartBtn.addEventListener('click', () => {
+            if (clickCount == 0) {
+                window.open(smartLinkUrl, '_blank');
+                clickCount = 1;
+                sessionStorage.setItem('link_clicks', 1);
+            } else {
+                window.open(originalUrl, '_blank');
+            }
+        });
+
+        // Mouse tracking effect for cards
         document.querySelectorAll('.glass-card').forEach(card => {
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
@@ -228,5 +279,9 @@
             });
         });
     </script>
+
+    <!-- Additional Ad Script (Smooth Placement) -->
+    <script src="https://pl28897363.effectivegatecpm.com/c4/76/c7/c476c7b7b3ef8170b722b4d7b66f81a1.js" async></script>
 </body>
 </html>
+
